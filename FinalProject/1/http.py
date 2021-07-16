@@ -11,7 +11,9 @@ class HttpServer:
 		self.sessions={}
 		self.types={}
 		self.types['.pdf']='application/pdf'
-		self.types['.jpg']='image/jpeg'
+		self.types['.jpeg']='image/jpeg'
+		self.types['.jpg'] ='image/jpg'
+		self.types['.png'] = 'image/png'
 		
 	def response(self,kode=404,message='Not Found',messagebody=bytes(),headers={}):
 		tanggal = datetime.now().strftime('%c')
