@@ -2,10 +2,10 @@ class LoadBalancer:
 	def __init__(self):
 		self.server_list = []
 		self.server_list.append(("localhost", 8888))
-		self.server_list.append(("localhost", 8889))
-		self.server_list.append(("localhost", 8890))
-		self.server_list.append(("localhost", 8891))
-		self.server_list.append(("localhost", 8892))
+		# self.server_list.append(("localhost", 8889))
+		# self.server_list.append(("localhost", 8890))
+		# self.server_list.append(("localhost", 8891))
+		# self.server_list.append(("localhost", 8892))
 		self.counter = 0
 		
 	def get_server(self):
