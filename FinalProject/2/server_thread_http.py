@@ -22,7 +22,7 @@ class ProcessTheClient(threading.Thread):
 				self.destination_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				if data:
 					server = reverseProxy.get_server()
-					print(f"forwarded to server {server}")
+					print(f"Diteruskan Ke Server {server}")
 					self.destination_sock.connect(server)
 					self.destination_sock.sendall(data)
 					data_balasan = self.destination_sock.recv(8192)
@@ -49,7 +49,7 @@ class Server(threading.Thread):
 		self.my_socket.listen(5)
 		while True:
 			self.connection, self.client_address = self.my_socket.accept()
-			logging.warning("connection from {}".format(self.client_address))
+			logging.warning("Koneksi Dari {}".format(self.client_address))
 
 			clt = ProcessTheClient(self.connection, self.client_address)
 			clt.start()
